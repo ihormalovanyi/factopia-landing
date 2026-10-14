@@ -1,0 +1,179 @@
+/* Factopia — the paper the app's icon is drawn on, and the ink it is drawn with. */
+
+:root {
+  --paper: #f2eee3;
+  --sheet: #fffdf8;
+  --ink: #23211d;
+  --soft: #5f5a50;
+  --rule: #ddd5c3;
+  --gold: #9a6a00;
+  --gold-wash: #f6e7c2;
+  --shadow: 0 1px 2px rgba(60, 50, 30, .06), 0 8px 28px rgba(60, 50, 30, .08);
+  --serif: ui-serif, "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1a1916;
+    --sheet: #23211d;
+    --ink: #ece7da;
+    --soft: #a7a091;
+    --rule: #3a362e;
+    --gold: #e8b84f;
+    --gold-wash: #3a2f17;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 var(--sans);
+  padding-inline: 16px;
+}
+
+a { color: inherit; text-decoration-color: var(--gold); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { color: var(--gold); }
+
+.wrap { max-width: 720px; margin-inline: auto; }
+
+/* Header and footer */
+
+.site-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-block: 28px 8px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font: 600 22px/1 var(--serif);
+  letter-spacing: -.01em;
+}
+.brand img { width: 40px; height: 40px; border-radius: 10px; box-shadow: var(--shadow); }
+
+.site-nav { display: flex; gap: 20px; font-size: 15px; }
+.site-nav a { text-decoration: none; color: var(--soft); }
+.site-nav a:hover, .site-nav a[aria-current] { color: var(--ink); }
+.site-nav a[aria-current] { text-decoration: underline; text-decoration-color: var(--gold); }
+
+.site-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  justify-content: space-between;
+  padding-block: 32px 48px;
+  color: var(--soft);
+  font-size: 14px;
+}
+.site-foot nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+
+/* The sheet a document is printed on: the app's fact card, at reading size */
+
+.sheet {
+  background: var(--sheet);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 6vw, 56px);
+  margin-block: 16px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 8px;
+}
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; text-wrap: balance; line-height: 1.2; }
+h1 { font-size: clamp(32px, 6vw, 44px); letter-spacing: -.02em; margin: 0 0 12px; }
+h2 { font-size: 26px; margin: 48px 0 12px; padding-top: 28px; border-top: 1px solid var(--rule); }
+h3 { font-size: 19px; margin: 28px 0 6px; }
+h2 + h3 { margin-top: 12px; }
+
+p, ul, ol { margin: 0 0 14px; max-width: 65ch; }
+li { margin-bottom: 6px; }
+li::marker { color: var(--gold); }
+
+.lede { font-size: 19px; color: var(--soft); margin-bottom: 0; }
+
+.short {
+  background: var(--gold-wash);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-block: 28px 8px;
+}
+.short p:last-child { margin-bottom: 0; }
+
+.meta { color: var(--soft); font-size: 15px; margin-top: 40px; }
+
+/* Support: the address to write to */
+
+.contact {
+  display: grid;
+  gap: 4px;
+  background: var(--gold-wash);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-block: 28px 8px;
+}
+.contact .address {
+  font: 600 clamp(20px, 5vw, 26px)/1.3 var(--serif);
+  user-select: all;
+  overflow-wrap: anywhere;
+}
+.contact p { margin: 0; }
+
+/* Home */
+
+.hero { text-align: center; padding-block: 24px 8px; }
+.hero .icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: var(--shadow); }
+.hero h1 { margin-top: 20px; }
+.hero .lede { margin-inline: auto; }
+
+.scene {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-block: 24px 0;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 60% 62% at 50% 50%, #000 62%, transparent 100%);
+}
+@media (prefers-color-scheme: dark) {
+  .scene { filter: invert(1) hue-rotate(180deg); mix-blend-mode: screen; opacity: .85; }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { color: var(--paper); opacity: .88; }
+
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-block: 32px 8px; }
+.point { background: var(--sheet); border-radius: 18px; box-shadow: var(--shadow); padding: 20px 22px; min-width: 0; }
+.point h3 { margin-top: 0; }
+.point p { margin: 0; color: var(--soft); font-size: 16px; }

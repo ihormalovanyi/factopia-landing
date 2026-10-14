@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Factopia</title>
+  <meta name="description" content="What the Factopia app keeps on your iPhone, the little it sends, and who handles it.">
+  <link rel="icon" type="image/png" href="images/favicon-64.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-head">
+    <a class="brand" href="./"><img src="images/icon-256.png" alt="">Factopia</a>
+    <nav class="site-nav">
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="sheet">
+    <p class="eyebrow">Factopia</p>
+    <h1>Privacy Policy</h1>
+    <p class="lede">Covers the Factopia app for iPhone, its widget, and this website.</p>
+
+    <div class="short">
+      <p><strong>The short version:</strong> Factopia has no accounts, no ads, no analytics and no tracking. The
+      cards you like, your streak, your coins and everything else you do in the app stay on your iPhone. The one thing
+      you write that leaves the device is a topic you type into Ask AI: it goes to Google's Gemini model so it can
+      write facts about it, and it is not linked to you.</p>
+    </div>
+
+    <h2>Who we are</h2>
+    <p>Factopia is an independent app, built and run by Ihor Malovanyi, a sole trader established in Ukraine. We are
+    the data controller for the personal data described in this policy. For anything in it, including a request to
+    see or delete your data, write to <a href="mailto:factopia@ihor.pro">factopia@ihor.pro</a>.</p>
+    <p>The terms you agree to when you use the app are separate, and are linked from the app's menu.</p>
+
+    <h2>The app</h2>
+
+    <h3>What stays on your iPhone</h3>
+    <p>The cards you have seen, liked and saved, your collections, streak and daily goal, your coins, the themes you
+    own, your game results and your settings are kept in the app's own storage on your device. The Fact of the Day
+    widget reads them from the app's private shared container on the same device. None of this is synced through
+    iCloud or sent to us. It is included in your device backups according to your iOS backup settings, and deleting
+    the app deletes it.</p>
+    <p>Reminders are local notifications, scheduled on your iPhone if you allow them; the app uses no push server.
+    "Tell me a fact with Factopia" in Siri and Shortcuts is answered on the device, from the facts already in the
+    app.</p>
+
+    <h3>Ask AI and Tell Me More</h3>
+    <p>When you ask for facts about a topic, the topic is sent to Google's Gemini model through Google Firebase
+    (Firebase AI Logic). While you type, the letters typed so far are sent the same way, so the app can suggest
+    topics. Tell Me More sends the text of the card you are on and the title of its source. Nothing else goes with
+    these requests: not your name, email address, contacts, location or advertising identifier. The app says this
+    before your first AI request.</p>
+    <p>Google processes these requests for us as a data processor. Factopia uses the paid Gemini API, and under
+    <a href="https://ai.google.dev/gemini-api/terms">its terms</a> Google does not use the prompts or the responses to
+    improve its products, and logs them for a limited period only to detect and prevent abuse and for legal
+    requirements. Please don't type personal information into a topic.</p>
+    <p>The facts AI writes are made on the spot, are not checked by us, and can be wrong.</p>
+
+    <h3>What the app downloads</h3>
+    <p>The app downloads new facts from Firebase Realtime Database, its settings (such as the seasonal fact sets and
+    the price of a theme) from Firebase Remote Config, and theme pictures from Firebase Storage. These requests only
+    read; like any request on the internet, they show the server your IP address, and Firebase's requests also carry
+    the app and system version.</p>
+    <p>The photos on the back of the cards come from Wikimedia Commons and are loaded straight from Wikimedia's
+    servers, which see your IP address as any website does. That is covered by the
+    <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Foundation Privacy Policy</a>.</p>
+
+    <h3>Keeping the service genuine</h3>
+    <p>So that nobody else can use Factopia's AI and database with copied keys, the app uses Firebase App Check, which
+    asks Apple's App Attest to confirm that a request comes from a real copy of Factopia on a real Apple device.
+    Firebase also gives each installation of the app a random installation ID, used to deliver settings to it, and
+    its components send Google limited technical diagnostics (such as how a request performed). None of this
+    identifies you, and we do not link it to you.</p>
+
+    <h3>Purchases</h3>
+    <p>Factopia Premium is sold by Apple through the App Store. Apple handles the payment; we never see your card
+    details or your Apple Account. The app checks your subscription on the device, and the sales reports Apple gives
+    us do not identify you.</p>
+
+    <h3>Writing to us and reporting a fact</h3>
+    <p>Contact and Report This Fact open your email app with a message addressed to us. A report fills in the card's
+    text, its number (or, for an AI card, the topic it was written for) and the app version; you can read and change
+    all of it, and nothing is sent until you press Send. When you write, we receive your email address and what you
+    wrote. We use it only to answer you and to fix the card, and keep it only as long as that takes.</p>
+
+    <h3>Sharing</h3>
+    <p>Share hands a picture of the card, its photo, and a link to Factopia on the App Store to the app you choose. That
+    is entirely your action, and we receive nothing from it.</p>
+
+    <h3>Ads, accounts and tracking</h3>
+    <p>The app shows no advertising and has no accounts. It does not track you across other apps or websites, does
+    not ask for your device's advertising identifier, does not build a profile about you, and we sell no data. Its App
+    Store privacy label lists two kinds of data, neither linked to you: the topics you type (Other User Content) and
+    Firebase's diagnostics (Other Diagnostic Data).</p>
+
+    <h2>Who handles the data</h2>
+    <ul>
+      <li><strong>Google</strong>: Firebase (Realtime Database, Remote Config, Storage, App Check, Installations, AI
+      Logic) and the Gemini API, as our processor. See <a href="https://firebase.google.com/support/privacy">Privacy
+      and Security in Firebase</a>.</li>
+      <li><strong>Apple</strong>: App Store purchases, App Attest, and TestFlight if you test a beta, under
+      <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+      <li><strong>Wikimedia Foundation</strong>: the card photos, as described above.</li>
+      <li><strong>GitHub</strong>: hosts this website.</li>
+    </ul>
+    <p>The facts database is stored in Belgium (Google's europe-west1 region). Google may process the other data in
+    the United States and in other countries where it has facilities. Transfers outside the EEA, the UK and Ukraine
+    are covered by the European Commission's Standard Contractual Clauses in Google's data processing terms, and by
+    the EU–US Data Privacy Framework, under which Google is certified.</p>
+
+    <h2>How long data is kept</h2>
+    <p>What stays on your iPhone is kept until you delete it or the app. AI requests are logged by Google for a limited
+    period, as described above. Installation IDs and diagnostics are kept by Firebase on its own schedule, set out in
+    its privacy page. Emails are kept only as long as it takes to answer them and fix what they report.</p>
+
+    <h2>Legal basis (EU, EEA and UK)</h2>
+    <p>We send an AI request because you asked for it: it is needed to provide the feature (GDPR Art. 6(1)(b)). App
+    Check, installation IDs and diagnostics rest on our legitimate interest in keeping the app secure and working
+    (Art. 6(1)(f)), and so does answering the emails you send us.</p>
+
+    <h2>Your rights</h2>
+    <p>You can ask to access, correct or delete the personal data we hold about you, object to its processing, or
+    receive a copy of it. Because Factopia has no accounts, almost everything lives on your own iPhone, where deleting
+    the app removes it; for anything else, write to <a href="mailto:factopia@ihor.pro">factopia@ihor.pro</a>. If you
+    are in the EU, the EEA or the UK, you may also complain to your data protection authority.</p>
+    <p><strong>California residents (CCPA/CPRA).</strong> The only personal information involved is internet and
+    network activity (the requests described above, including IP addresses seen by the services that answer them)
+    and, if you write to us, your email address. We do not sell or share personal information, do not use it for
+    cross-context behavioral advertising, and will not treat you differently for exercising your rights.</p>
+
+    <h2>Children</h2>
+    <p>Factopia is not directed at children, and we do not knowingly collect personal information from them. The app
+    asks for no name, email address or other detail that could identify anyone. If you believe a child has sent us
+    personal information by email, write to us and we will delete it.</p>
+
+    <h2>This website</h2>
+    <p>This website sets no cookies and uses no analytics, fonts or scripts from anyone else. GitHub, which hosts it,
+    may keep standard server logs (IP address, time, page requested) for security; we do not use them to identify
+    anyone.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we will update this page and the date below.</p>
+
+    <p class="meta">Effective date: October 14, 2026</p>
+  </main>
+
+  <footer class="site-foot">
+    <span>© 2026 Ihor Malovanyi</span>
+    <nav>
+      <a href="./">Factopia</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:factopia@ihor.pro">factopia@ihor.pro</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>
